@@ -1,0 +1,11 @@
+{
+  "allowJs": true,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["spa/src/**/*"],
+  "exclude": ["spa/node_modules"]
+}

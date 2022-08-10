@@ -1,0 +1,70 @@
+@import "variables";
+
+input,
+textarea {
+  outline: none;
+  font-family: inherit;
+}
+
+.input__label {
+  color: $dark-gray;
+  margin-bottom: 4px;
+}
+
+.input__field {
+  height: 48px;
+  border-radius: 4px;
+  // margin-bottom: 20px;
+  padding: 0px 13px;
+  font-size: $size_l;
+  transition: 0.2s;
+  border: 1px solid $gray;
+  color: $black;
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &:not(:read-only):focus {
+    border: 1px solid $blue !important;
+  }
+
+  &:disabled {
+    border: none;
+    background: $light-gray;
+    color: $gray;
+  }
+
+  &:not(:disabled):read-only {
+    border: none;
+    background: none;
+    height: auto;
+    padding: 0;
+    font-size: $size_m;
+  }
+
+  &[type="password"] {
+    font-size: $size_2xl;
+  }
+}
+
+.base-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.error {
+  .input__field {
+    border: 1px solid $red;
+  }
+}
+
+.error-message {
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  color: $red;
+  font-size: 15px;
+}
